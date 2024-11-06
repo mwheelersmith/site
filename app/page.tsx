@@ -10,6 +10,8 @@ import { ExperienceDetails } from "@/components/experience/details";
 import { ExperienceContributions } from "@/components/experience/contributions";
 import { ExperienceContributionsItem } from "@/components/experience/contributions-item";
 
+import { Education } from "@/components/education";
+
 export default function Home() {
   return (
     <main className="mx-auto flex flex-col gap-8 rounded-lg bg-white p-8 font-[family-name:var(--font-geist-sans)] sm:p-16 lg:my-4 lg:max-w-[1024px] lg:shadow-md dark:bg-zinc-900 dark:shadow-none">
@@ -172,6 +174,8 @@ export default function Home() {
           </p>
         </ExperienceSection>
       </Experience>
+
+      <Education />
     </main>
   );
 }

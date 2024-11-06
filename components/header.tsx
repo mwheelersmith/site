@@ -3,7 +3,7 @@ import { Inbox, Briefcase, FileJson } from "lucide-react";
 export function Header() {
   return (
     <div className="flex flex-col gap-2 border-b border-zinc-200 pb-8 dark:border-zinc-600">
-      <h1 className="text-2xl font-medium">Miles Wheeler-Smith</h1>
+      <h1 className="text-3xl font-medium">Miles Wheeler-Smith</h1>
 
       <div className="flex flex-wrap gap-x-6 gap-y-2">
         <a

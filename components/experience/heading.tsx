@@ -1,3 +1,3 @@
 export function ExperienceHeading({ children }) {
-  return <div className="flex flex-col gap-1">{children}</div>;
+  return <div className="flex flex-col">{children}</div>;
 }

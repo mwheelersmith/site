@@ -10,15 +10,15 @@ import { ExperienceContributions } from "@/components/experience/contributions";
 
 export default function Home() {
   return (
-    <main className="mx-auto flex flex-col gap-8 p-8 font-[family-name:var(--font-geist-sans)] sm:p-16 lg:max-w-[1024px]">
+    <main className="mx-auto my-4 flex flex-col gap-8 rounded-lg bg-white p-8 font-[family-name:var(--font-geist-sans)] shadow-md sm:p-16 lg:max-w-[1024px] dark:bg-zinc-900 dark:shadow-none">
       <Header />
 
       <Summary />
 
       <Skills />
 
-      {/* UI Engineering Lead at Cisco */}
       <ExperienceSection>
+        {/* UI Engineering Lead at Cisco */}
         <ExperienceHeading>
           <ExperienceTitle>UI Engineering Lead</ExperienceTitle>
           <ExperienceDetails
@@ -52,6 +52,31 @@ export default function Home() {
             "Engineered an SMS campaign tool with a custom message composer that supports merge fields, short links, and WhatsApp formatting for enhanced communication.",
           ]}
         />
+
+        {/* UX Design Lead at Cisco */}
+        <ExperienceHeading>
+          <ExperienceTitle>Senior UI Engineer</ExperienceTitle>
+          <ExperienceDetails
+            company="Cisco"
+            serviceDates="Aug 21 - May 23"
+            serviceLength="1 yr 10 mos"
+          />
+        </ExperienceHeading>
+
+        <p>
+          I joined Cisco in 2021 through the acquisition of IMImobile,
+          Textlocal&rsquo;s parent company. Initially, my role centered on
+          integrating Textlocal&rsquo;s platform into the Cisco Webex Cloud
+          suite, aligning with Cisco&rsquo;s stringent security and procedural
+          standards.
+        </p>
+
+        <p>
+          Shortly after, Cisco embarked on a full rebuild of Textlocal as a new
+          Webex product, transforming it from an SMS platform to a comprehensive
+          multi-channel solution. At this stage, I was promoted to UI
+          Engineering Lead to oversee its development and successful delivery.
+        </p>
       </ExperienceSection>
     </main>
   );

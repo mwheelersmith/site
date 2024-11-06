@@ -8,6 +8,7 @@ import { ExperienceHeading } from "@/components/experience/heading";
 import { ExperienceTitle } from "@/components/experience/title";
 import { ExperienceDetails } from "@/components/experience/details";
 import { ExperienceContributions } from "@/components/experience/contributions";
+import { ExperienceContributionsItem } from "@/components/experience/contributions-item";
 
 export default function Home() {
   return (
@@ -47,13 +48,22 @@ export default function Home() {
             stringent enterprise security policies.
           </p>
 
-          <ExperienceContributions
-            contributions={[
-              "Designed and implemented a user authentication system in Next.js, seamlessly integrating with a centralised Webex OAuth service.",
-              "Developed a UI component library for Webex, built on Mantine and customized for consistency, accessibility, and usability across teams and platforms.",
-              "Engineered an SMS campaign tool with a custom message composer that supports merge fields, short links, and WhatsApp formatting for enhanced communication.",
-            ]}
-          />
+          <ExperienceContributions>
+            <ExperienceContributionsItem>
+              Designed and implemented a user authentication system in Next.js,
+              seamlessly integrating with a centralised Webex OAuth service.
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Developed a UI component library for Webex, built on Mantine and
+              customized for consistency, accessibility, and usability across
+              teams and platforms.
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Engineered an SMS campaign tool with a custom message composer
+              that supports merge fields, short links, and WhatsApp formatting
+              for enhanced communication.
+            </ExperienceContributionsItem>
+          </ExperienceContributions>
         </ExperienceSection>
 
         <ExperienceSection>

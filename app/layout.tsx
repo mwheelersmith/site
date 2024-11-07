@@ -16,7 +16,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Miles Wheeler-Smith | UI Engineering Leader",
   description:
-    "Miles is an experienced front-end lead with over 12 years of experience building SaaS applications.",
+    "Miles is a seasoned front-end lead with over 15 years of experience developing SaaS applications.",
 };
 
 export default function RootLayout({

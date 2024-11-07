@@ -28,15 +28,15 @@ export default function Home() {
             <ExperienceTitle>UI Engineering Lead</ExperienceTitle>
             <ExperienceDetails
               company="Cisco"
-              serviceDates="May 23 - Dec 24"
-              serviceLength="1 yr 8 mos"
+              serviceDates="May 23 - Present"
+              serviceLength="1 yr 7 mos"
             />
           </ExperienceHeading>
 
           <p>
-            Resonisible for architecting and building a multi-channel messaging
+            Responsible for architecting and building a multi-channel messaging
             application for the Webex CPaaS suite. I recruited and led a team of
-            five skilled UI engineers, contributing as a senior engineer while
+            five skilled UI engineers, contributing as a senior engineer and
             serving as the primary liaison for product managers, designers,
             directors, and other key stakeholders.
           </p>
@@ -57,7 +57,7 @@ export default function Home() {
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Developed a UI component library for Webex, built on Mantine and
-              customized for consistency, accessibility, and usability across
+              customised for consistency, accessibility, and usability across
               teams and platforms.
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
@@ -81,7 +81,7 @@ export default function Home() {
 
           <p>
             I joined Cisco in 2021 through the acquisition of IMImobile,
-            Textlocal&rsquo;s parent company. Initially, my role centered on
+            Textlocal&rsquo;s parent company. Initially, my role centred on
             integrating Textlocal&rsquo;s platform into the Cisco Webex Cloud
             suite, aligning with Cisco&rsquo;s stringent security and procedural
             standards.

@@ -1,9 +1,10 @@
 import { Inbox, Briefcase, FileJson } from "lucide-react";
+import { TypographyH1 } from "@/components/ui/typography-h1";
 
 export function Header() {
   return (
     <div className="flex flex-col gap-2 border-b border-zinc-200 pb-8 dark:border-zinc-600">
-      <h1 className="text-3xl font-medium">Miles Wheeler-Smith</h1>
+      <TypographyH1>Miles Wheeler-Smith</TypographyH1>
 
       <div className="flex flex-wrap gap-x-6 gap-y-2">
         <a

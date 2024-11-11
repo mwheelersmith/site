@@ -6,8 +6,8 @@ import { LinksListItem } from "@/components/links-list-item";
 
 export default function Home() {
   return (
-    <main className="mx-auto mt-32 flex w-[640px] flex-col">
-      <div className="flex flex-col gap-16 rounded-xl border border-zinc-200 p-16 pb-8">
+    <main className="mx-auto mt-32 flex flex-col md:w-[640px]">
+      <div className="flex flex-col gap-16 rounded-xl border-zinc-200 p-16 pb-8 md:border dark:border-zinc-800">
         <Image
           className="self-center rounded-full"
           src="/miles-avatar.jpg"

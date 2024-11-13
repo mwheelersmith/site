@@ -15,7 +15,7 @@ export function Summary() {
       <p className="print:hidden">
         This page is available to view on{" "}
         <a
-          className="text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-300 dark:hover:text-violet-400"
+          className="text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-500 dark:hover:text-violet-300"
           href="https://github.com/mwheelersmith/site/blob/main/app/resume/page.tsx"
           target="_blank"
           rel="noopener noreferrer"

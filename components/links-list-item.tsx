@@ -12,7 +12,7 @@ export function LinksListItem({
   return (
     <a
       href={href}
-      className="group inline-flex items-center gap-1 text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-300 dark:hover:text-violet-400"
+      className="group inline-flex items-center gap-1 text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-500 dark:hover:text-violet-300"
     >
       {children}
       <ChevronRight

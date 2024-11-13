@@ -8,14 +8,14 @@ export function Header() {
 
       <div className="flex flex-wrap gap-x-6 gap-y-2">
         <a
-          className="flex items-center gap-2 text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-300 dark:hover:text-violet-400"
+          className="flex items-center gap-2 text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-500 dark:hover:text-violet-300"
           href="mailto:miles@mileswheelersmith.com"
         >
           <Inbox size={16} className="text-zinc-950 dark:text-zinc-50" />
           <span>miles@mileswheelersmith.com</span>
         </a>
         <a
-          className="flex items-center gap-2 text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-300 dark:hover:text-violet-400"
+          className="flex items-center gap-2 text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-500 dark:hover:text-violet-300"
           href="https://www.linkedin.com/in/mwheelersmith/"
           target="_blank"
           rel="noopener noreferrer"
@@ -24,7 +24,7 @@ export function Header() {
           <span>LinkedIn</span>
         </a>
         <a
-          className="flex items-center gap-2 text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-300 dark:hover:text-violet-400"
+          className="flex items-center gap-2 text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-500 dark:hover:text-violet-300"
           href="https://github.com/mwheelersmith"
           target="_blank"
           rel="noopener noreferrer"

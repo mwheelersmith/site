@@ -14,7 +14,7 @@ import { Education } from "@/components/resume/education";
 
 export default function Resume() {
   return (
-    <main className="mx-auto flex flex-col gap-8 rounded-lg bg-white p-8 font-[family-name:var(--font-geist-sans)] sm:p-16 lg:max-w-[1024px] lg:shadow-md dark:bg-zinc-900 dark:shadow-none">
+    <main className="mx-auto mb-8 flex flex-col gap-8 rounded-lg bg-white p-8 sm:p-16 lg:max-w-[1024px] lg:shadow-md dark:bg-zinc-900 dark:shadow-none">
       <Header />
 
       <Summary />

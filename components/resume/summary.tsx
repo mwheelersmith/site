@@ -13,10 +13,10 @@ export function Summary() {
         impactful solutions.
       </p>
       <p className="print:hidden">
-        This site is available to view on{" "}
+        This page is available to view on{" "}
         <a
-          className="text-indigo-800 hover:underline hover:underline-offset-4 dark:text-indigo-300"
-          href="https://github.com/mwheelersmith/site"
+          className="text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-300 dark:hover:text-violet-400"
+          href="https://github.com/mwheelersmith/site/blob/main/app/resume/page.tsx"
           target="_blank"
           rel="noopener noreferrer"
         >

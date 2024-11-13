@@ -1,19 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { NavLinks } from "@/components/nav-links";
 
 export const metadata: Metadata = {
   title: "Miles Wheeler-Smith | UI Engineering Leader",
@@ -29,8 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50 ${geistSans.variable} ${geistMono.variable} antialiased selection:bg-indigo-100 dark:selection:bg-indigo-800`}
+        className={`bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50 ${GeistSans.variable} font-sans antialiased selection:bg-violet-100 dark:selection:bg-violet-800`}
       >
+        <nav className="my-8 flex items-center justify-center gap-4">
+          <NavLinks />
+        </nav>
+
         {children}
         <Analytics />
       </body>

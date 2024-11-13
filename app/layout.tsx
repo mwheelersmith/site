@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
+import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
 
 import { NavLinks } from "@/components/nav-links";
+import ThemeSwitcher from "@/components/theme-switcher";
 
 export const metadata: Metadata = {
   title: "Miles Wheeler-Smith | UI Engineering Leader",
@@ -18,15 +20,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50 ${GeistSans.variable} font-sans antialiased selection:bg-violet-100 dark:selection:bg-violet-800`}
       >
-        <nav className="my-8 flex items-center justify-center gap-4">
-          <NavLinks />
-        </nav>
+        <ThemeProvider attribute="class">
+          <ThemeSwitcher />
 
-        {children}
+          <nav className="my-8 flex items-center justify-center gap-4">
+            <NavLinks />
+          </nav>
+
+          {children}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

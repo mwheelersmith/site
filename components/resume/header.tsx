@@ -5,6 +5,7 @@ export function Header() {
   return (
     <div className="flex flex-col gap-2 border-b border-zinc-200 pb-8 dark:border-zinc-600">
       <TypographyH1>Miles Wheeler-Smith</TypographyH1>
+      <p>Worcester, United Kingdom</p>
 
       <div className="flex flex-wrap gap-x-6 gap-y-2">
         <a

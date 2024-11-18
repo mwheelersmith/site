@@ -20,7 +20,7 @@ const ThemeSwitcher = () => {
   }
 
   return (
-    <div className="mt-4 flex justify-center gap-2 md:fixed md:left-4 md:top-4 md:mt-0">
+    <div className="mt-4 flex justify-center gap-2 md:absolute md:left-4 md:top-4 md:mt-0">
       <button
         onClick={() => setTheme("light")}
         className={cn(

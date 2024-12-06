@@ -91,7 +91,7 @@ export default function Resume() {
             Shortly after, Cisco embarked on a full rebuild of Textlocal as a
             new Webex product, transforming it from an SMS platform to a
             comprehensive multi-channel solution. At this stage, I was promoted
-            to UI Engineering Lead to oversee its development and successful
+            to Lead Front-End Engineer to oversee its development and successful
             delivery.
           </p>
         </ExperienceSection>

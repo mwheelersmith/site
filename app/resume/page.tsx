@@ -23,9 +23,9 @@ export default function Resume() {
 
       <Experience>
         <ExperienceSection>
-          {/* UI Engineering Lead at Cisco */}
+          {/* Lead Front-End Engineer at Cisco */}
           <ExperienceHeading>
-            <ExperienceTitle>UI Engineering Lead</ExperienceTitle>
+            <ExperienceTitle>Lead Front-End Engineer</ExperienceTitle>
             <ExperienceDetails
               company="Cisco"
               serviceDates="May 23 - Present"
@@ -69,9 +69,9 @@ export default function Resume() {
         </ExperienceSection>
 
         <ExperienceSection>
-          {/* UX Design Lead at Cisco */}
+          {/* Senior Front-End Engineer at Cisco */}
           <ExperienceHeading>
-            <ExperienceTitle>Senior UI Engineer</ExperienceTitle>
+            <ExperienceTitle>Senior Front-End Engineer</ExperienceTitle>
             <ExperienceDetails
               company="Cisco"
               serviceDates="Aug 21 - May 23"
@@ -97,9 +97,9 @@ export default function Resume() {
         </ExperienceSection>
 
         <ExperienceSection>
-          {/* UX Design Lead at Textlocal */}
+          {/* Lead UX/Front-End Engineer at Textlocal */}
           <ExperienceHeading>
-            <ExperienceTitle>UX Design Lead</ExperienceTitle>
+            <ExperienceTitle>Lead UX/Front-End Engineer</ExperienceTitle>
             <ExperienceDetails
               company="Textlocal"
               serviceDates="Sep 16 - Aug 21"
@@ -125,9 +125,9 @@ export default function Resume() {
         </ExperienceSection>
 
         <ExperienceSection>
-          {/* Full Stack Engineer at Textlocal */}
+          {/* Full-Stack Engineer at Textlocal */}
           <ExperienceHeading>
-            <ExperienceTitle>Full Stack Engineer</ExperienceTitle>
+            <ExperienceTitle>Full-Stack Engineer</ExperienceTitle>
             <ExperienceDetails
               company="Textlocal"
               serviceDates="Jan 12 - Sep 16"

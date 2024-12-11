@@ -8,9 +8,8 @@ export function Skills() {
         <li className="font-medium">React</li>
         <li className="font-medium">Next.js</li>
         <li className="font-medium">Node.js</li>
-        <li className="font-medium">CSS</li>
-        <li className="font-medium">Tailwind</li>
-        <li className="font-medium">RESTful</li>
+        <li className="font-medium">CSS &amp; Tailwind</li>
+        <li className="font-medium">RESTful APIs</li>
         <li className="font-medium">Figma</li>
         <li className="font-medium">Accessibility</li>
       </ul>

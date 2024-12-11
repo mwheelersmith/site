@@ -25,45 +25,46 @@ export default function Resume() {
         <ExperienceSection>
           {/* Lead Front-End Engineer at Cisco */}
           <ExperienceHeading>
-            <ExperienceTitle>Lead Front-End Engineer</ExperienceTitle>
             <ExperienceDetails
               company="Cisco"
-              serviceDates="May 23 - Present"
-              serviceLength="1 yr 7 mos"
+              serviceDates="May 2023 - Dec 2024"
+              serviceLength="1 yr 8 mos"
             />
+            <ExperienceTitle>Lead Front-End Engineer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
-            Responsible for architecting and building a multi-channel messaging
-            application for the Webex CPaaS suite. I recruited and led a team of
-            five skilled UI engineers, contributing as a senior engineer and
-            serving as the primary liaison for product managers, designers,
-            directors, and other key stakeholders.
-          </p>
-
-          <p>
-            I selected the tech stack (Next.js and Tailwind) based on business
-            requirements, presenting its strategic advantages to senior
-            management. I also designed development processes and protocols
-            tailored to the team&rsquo;s feedback and experiences, ensuring a
-            productive and adaptable workflow that adhered to Cisco&rsquo;s
-            stringent enterprise security policies.
+            Architected and built a multi-channel messaging application for the
+            Webex suite. Led a team of five front-end engineers while
+            contributing as a senior engineer and collaborating with product
+            managers, designers, and directors. Reported to the Director of
+            Software Engineering, ensuring strategic alignment and fostering
+            cross-functional collaboration.
           </p>
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
-              Designed and implemented a user authentication system in Next.js,
-              seamlessly integrating with a centralised Webex OAuth service.
+              Evaluated and selected a tech stack based on business needs,
+              presenting its strategic advantages to senior management.
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Designed development processes that incorporated team feedback and
+              adhered to Cisco&rsquo;s security policies, creating a productive
+              and adaptable workflow.
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Implemented a Next.js user authentication system, integrating
+              seamlessly with a centralised OAuth service.
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Developed a UI component library for Webex, built on Mantine and
-              customised for consistency, accessibility, and usability across
+              customised for consistency, accessibility and usability across
               teams and platforms.
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
-              Engineered an SMS campaign tool with a custom message composer
-              that supports merge fields, short links, and WhatsApp formatting
-              for enhanced communication.
+              Engineered an SMS campaign tool featuring a custom message
+              composer with support for merge fields, short links and WhatsApp
+              formatting, enhancing communication capabilities.
             </ExperienceContributionsItem>
           </ExperienceContributions>
         </ExperienceSection>
@@ -71,106 +72,129 @@ export default function Resume() {
         <ExperienceSection>
           {/* Senior Front-End Engineer at Cisco */}
           <ExperienceHeading>
-            <ExperienceTitle>Senior Front-End Engineer</ExperienceTitle>
             <ExperienceDetails
               company="Cisco"
-              serviceDates="Aug 21 - May 23"
+              serviceDates="Aug 2021 - May 2023"
               serviceLength="1 yr 10 mos"
             />
+            <ExperienceTitle>Senior Front-End Engineer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
-            I joined Cisco in 2021 through the acquisition of IMImobile,
-            Textlocal&rsquo;s parent company. Initially, my role centred on
-            integrating Textlocal&rsquo;s platform into the Cisco Webex Cloud
-            suite, aligning with Cisco&rsquo;s stringent security and procedural
-            standards.
+            Played a key role in the full rebuild of a legacy product,
+            transforming it from an SMS platform into a comprehensive
+            multi-channel Webex solution. Reported to the Software Engineering
+            Lead and was promoted to Lead Front-End Engineer to oversee its
+            continued development and successful delivery.
           </p>
 
-          <p>
-            Shortly after, Cisco embarked on a full rebuild of Textlocal as a
-            new Webex product, transforming it from an SMS platform to a
-            comprehensive multi-channel solution. At this stage, I was promoted
-            to Lead Front-End Engineer to oversee its development and successful
-            delivery.
-          </p>
+          <ExperienceContributions>
+            <ExperienceContributionsItem>
+              Refactored the tech stack, transitioning from Java and FreeMarker
+              to a streamlined React-based front-end.
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Facilitated the merger of two teams to work collaboratively in a
+              new capacity, establishing a balanced front-end and back-end
+              divide.
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Shaped the product roadmap by leveraging industry expertise,
+              influencing product manager requirements and inspiring design
+              solutions.
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Introduced agile methodologies tailored to the needs of a new team
+              and company structure, improving development efficiency.
+            </ExperienceContributionsItem>
+          </ExperienceContributions>
         </ExperienceSection>
 
         <ExperienceSection>
           {/* Lead UX/Front-End Engineer at Textlocal */}
           <ExperienceHeading>
-            <ExperienceTitle>Lead UX/Front-End Engineer</ExperienceTitle>
             <ExperienceDetails
               company="Textlocal"
-              serviceDates="Sep 16 - Aug 21"
+              serviceDates="Sep 2016 - Aug 2021"
               serviceLength="5 yrs"
             />
+            <ExperienceTitle>Lead UX/Front-End Engineer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
-            Led a small front-end team for an award-winning SMS platform,
-            overseeing the redesign and implementation of the user interface to
-            align with modern UX best practices, enhancing usability and visual
-            coherence. Worked closely with back-end engineers to design APIs
-            that met stakeholder business needs and contributed to implementing
-            a new SMS engine powered by WebSockets to enable real-time
-            messaging.
+            Led a small front-end team, overseeing and contributing to the
+            redesign and engineering of the user interface. Focused on aligning
+            the design with modern UX best practices to enhance usability,
+            visual coherence, and overall user experience. Reported to the
+            Development Manager throughout the project.
           </p>
 
-          <p>
-            Recruited and mentored a new front-end developer, providing hands-on
-            support and training to strengthen the team&rsquo;s capabilities and
-            foster growth.
-          </p>
+          <ExperienceContributions>
+            <ExperienceContributionsItem>
+              Recruited and mentored a new front-end developer, providing
+              hands-on support and training to strengthen the team&rsquo;s
+              capabilities and foster growth.
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Worked closely with back-end engineers to design APIs that met
+              business needs.
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Designed and built a new SMS engine powered by WebSockets to
+              enable real-time messaging.
+            </ExperienceContributionsItem>
+          </ExperienceContributions>
         </ExperienceSection>
 
         <ExperienceSection>
           {/* Full-Stack Engineer at Textlocal */}
           <ExperienceHeading>
-            <ExperienceTitle>Full-Stack Engineer</ExperienceTitle>
             <ExperienceDetails
               company="Textlocal"
-              serviceDates="Jan 12 - Sep 16"
+              serviceDates="Jan 2012 - Sep 2016"
               serviceLength="4 yrs 9 mos"
             />
+            <ExperienceTitle>Full-Stack Engineer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
-            Designed and developed web services to meet both internal and
-            external requirements, while providing technical support to a large,
-            diverse customer base. Working in a small team required flexibility
-            across the full stack—from UX design through to front-end and
-            back-end development—implementing new features and platform
-            improvements for an audience of over 160,000 multinational users.
+            Worked in a small, cross-functional team spanning UI design,
+            front-end and back-end development, delivering new features and
+            platform improvements for over 160,000 multinational users. Reported
+            directly to the business founder.
           </p>
 
-          <p>
-            Co-led the development and integration of two new products,
-            including a ticketing tool and a survey solution for businesses and
-            individuals, each closely integrated with the core SMS platform. The
-            ticketing tool earned two prestigious industry awards, outperforming
-            entries from major brands such as John Lewis and Audi.
-          </p>
+          <ExperienceContributions>
+            <ExperienceContributionsItem>
+              Co-led the development and integration of two new products: a
+              ticketing tool and a survey solution for businesses and
+              individuals, both seamlessly integrated with the core SMS
+              platform.
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Earned two industry awards for product advancements, outperforming
+              entries from major brands such as Audi and John Lewis.
+            </ExperienceContributionsItem>
+          </ExperienceContributions>
         </ExperienceSection>
 
         <ExperienceSection>
           {/* Web Developer at Bluelinemedia */}
           <ExperienceHeading>
-            <ExperienceTitle>Web Developer</ExperienceTitle>
             <ExperienceDetails
               company="Bluelinemedia"
-              serviceDates="Nov 09 - Jan 12"
+              serviceDates="Nov 2009 - Jan 2012"
               serviceLength="2 yrs 3 mos"
             />
+            <ExperienceTitle>Web Developer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
-            As a Web Developer at a small agency, I developed a wide range of
-            websites for various clients, from simple brochure sites to complex
-            e-commerce and CMS-driven platforms. Gained both front-end and
-            back-end experience, and frequently managed client relationships,
-            ensuring their needs were met throughout the website development
-            process.
+            Developed a diverse range of websites for clients at a small web
+            agency, including brochure sites, e-commerce platforms and
+            CMS-driven solutions. Gained hands-on experience in front-end and
+            back-end development while managing client relationships to ensure
+            their needs were met throughout the process.
           </p>
         </ExperienceSection>
       </Experience>

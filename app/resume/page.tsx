@@ -27,6 +27,7 @@ export default function Resume() {
           <ExperienceHeading>
             <ExperienceDetails
               company="Cisco"
+              location="Remote"
               serviceDates="May 2023 - Dec 2024"
               serviceLength="1 yr 8 mos"
             />
@@ -74,6 +75,7 @@ export default function Resume() {
           <ExperienceHeading>
             <ExperienceDetails
               company="Cisco"
+              location="Remote"
               serviceDates="Aug 2021 - May 2023"
               serviceLength="1 yr 10 mos"
             />
@@ -115,6 +117,7 @@ export default function Resume() {
           <ExperienceHeading>
             <ExperienceDetails
               company="Textlocal"
+              location="Malvern, UK"
               serviceDates="Sep 2016 - Aug 2021"
               serviceLength="5 yrs"
             />
@@ -151,6 +154,7 @@ export default function Resume() {
           <ExperienceHeading>
             <ExperienceDetails
               company="Textlocal"
+              location="Malvern, UK"
               serviceDates="Jan 2012 - Sep 2016"
               serviceLength="4 yrs 9 mos"
             />
@@ -183,6 +187,7 @@ export default function Resume() {
           <ExperienceHeading>
             <ExperienceDetails
               company="Bluelinemedia"
+              location="Cheltenham, UK"
               serviceDates="Nov 2009 - Jan 2012"
               serviceLength="2 yrs 3 mos"
             />

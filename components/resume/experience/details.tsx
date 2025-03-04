@@ -2,10 +2,12 @@ import { Building2, Calendar } from "lucide-react";
 
 export function ExperienceDetails({
   company,
+  location,
   serviceDates,
   serviceLength,
 }: {
   company: string;
+  location: string;
   serviceDates: string;
   serviceLength: string;
 }) {
@@ -14,6 +16,9 @@ export function ExperienceDetails({
       <p className="flex items-center gap-2">
         <Building2 size={16} />
         {company}
+        <span className="hidden text-sm text-zinc-500 sm:inline-block dark:text-zinc-400">
+          &bull; {location}
+        </span>
       </p>
       <p className="flex items-center gap-2">
         <Calendar size={16} />

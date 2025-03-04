@@ -12,6 +12,11 @@ export function Skills() {
         <li className="font-medium">RESTful APIs</li>
         <li className="font-medium">Figma</li>
         <li className="font-medium">Accessibility</li>
+        <li className="font-medium">CI/CD</li>
+        <li className="font-medium">Project Management</li>
+        <li className="font-medium">Agile Methodologies</li>
+        <li className="font-medium">UI/UX Optimisation</li>
+        <li className="font-medium">Software Lifecycle</li>
       </ul>
     </div>
   );

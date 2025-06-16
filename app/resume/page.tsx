@@ -1,3 +1,5 @@
+import formatWorkDuration from "@/lib/format-work-duration";
+
 import { Header } from "@/components/resume/header";
 import { Summary } from "@/components/resume/summary";
 import { Skills } from "@/components/resume/skills";
@@ -23,6 +25,26 @@ export default function Resume() {
 
       <Experience>
         <ExperienceSection>
+          {/* Senior Developer at Travel Chapter */}
+          <ExperienceHeading>
+            <ExperienceDetails
+              company="Travel Chapter"
+              location="Remote"
+              serviceDates="May 2025 - Present"
+              serviceLength={formatWorkDuration(new Date(2025, 4))}
+            />
+            <ExperienceTitle>Senior Developer</ExperienceTitle>
+          </ExperienceHeading>
+
+          <p>
+            Recently started at Travel Chapter in the Guest tribe, building and
+            maintaining their customer-facing web applications, including the
+            flagship holidaycottages.co.uk. This full-stack role takes me back
+            to my roots, but now with a modern TypeScript stack.
+          </p>
+        </ExperienceSection>
+
+        <ExperienceSection>
           {/* Lead Front-End Engineer at Cisco */}
           <ExperienceHeading>
             <ExperienceDetails
@@ -36,26 +58,31 @@ export default function Resume() {
 
           <p>
             Architected and built a multi-channel messaging application for the
-            Webex suite. Led a team of five front-end engineers while
-            contributing as a senior engineer and collaborating with product
-            managers, designers, and directors. Reported to the Director of
-            Software Engineering, ensuring strategic alignment and fostering
-            cross-functional collaboration.
+            Cisco Webex suite, developing core front-end features and optimising
+            performance with minimal guidance. Took ownership of complex UI
+            development, ensuring scalability and accessibility while making
+            critical technical decisions independently. Worked closely with
+            product managers, designers and directors to translate business
+            requirements into seamless user experiences. Reported to the
+            Director of Software Engineering, aligning technical decisions with
+            strategic goals in a fast-paced environment.
           </p>
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
-              Evaluated and selected a tech stack based on business needs,
-              presenting its strategic advantages to senior management.
+              Assessed business requirements to evaluate and select a tech stack
+              of Next.js, TypeScript and Tailwind, advocating its strategic
+              advantages to senior management and securing buy-in.
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
-              Designed development processes that incorporated team feedback and
-              adhered to Cisco&rsquo;s security policies, creating a productive
-              and adaptable workflow.
+              Wrote secure, high-performance code that adhered to Cisco’s
+              security policies and best practices, ensuring robustness and
+              scalability across the application.
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
-              Implemented a Next.js user authentication system, integrating
-              seamlessly with a centralised OAuth service.
+              Developed a Next.js user authentication system that
+              reverse-proxied requests to the back end, offloading JWT storage
+              from the client side to enhance security and performance.
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Developed a UI component library for Webex, built on Mantine and

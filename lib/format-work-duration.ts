@@ -1,12 +1,8 @@
 export default function formatWorkDuration(startDate: Date): string {
   const now = new Date();
-  let months =
+  const months =
     (now.getFullYear() - startDate.getFullYear()) * 12 +
     (now.getMonth() - startDate.getMonth());
-
-  if (now.getDate() < startDate.getDate()) {
-    months -= 1;
-  }
 
   const years = Math.floor(months / 12);
   const remainingMonths = months % 12;

@@ -20,13 +20,12 @@ export default function Home() {
           <Hello />
 
           <LinksList>
-            <LinksListItem href="https://github.com/mwheelersmith">
-              GitHub
-            </LinksListItem>
             <LinksListItem href="https://www.linkedin.com/in/mwheelersmith">
               LinkedIn
             </LinksListItem>
-            <LinksListItem href="https://x.com/mwheelersmith">X</LinksListItem>
+            <LinksListItem href="https://github.com/mwheelersmith">
+              GitHub
+            </LinksListItem>
             <LinksListItem href="https://cal.com/mwheelersmith">
               Schedule a Call
             </LinksListItem>

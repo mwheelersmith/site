@@ -6,7 +6,7 @@ export function Hello() {
       <TypographyH1 classname="flex-none">Hello 👋</TypographyH1>
       <div className="flex flex-col gap-4">
         <p>
-          I&rsquo;m Miles, a Tech Lead from the UK with a passion for building
+          I&rsquo;m Miles, a Lead Developer with a passion for building
           intuitive, clean, and accessible web interfaces.
         </p>
       </div>

@@ -9,9 +9,9 @@ import { NavLinks } from "@/components/nav-links";
 import ThemeSwitcher from "@/components/theme-switcher";
 
 export const metadata: Metadata = {
-  title: "Miles Wheeler-Smith | Tech Lead",
+  title: "Miles Wheeler-Smith | Lead Developer",
   description:
-    "Tech Lead with 15+ years of experience building scalable, user-centric web applications. Expert in TypeScript, React, Next.js, Node.js, and accessible, high-performance UI design.",
+    "Lead Developer with 15+ years of experience building scalable, user-centric web applications. Expert in TypeScript, React, Next.js, and accessible, high-performance UI design.",
 };
 
 export default function RootLayout({

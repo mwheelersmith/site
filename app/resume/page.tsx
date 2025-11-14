@@ -37,11 +37,23 @@ export default function Resume() {
           </ExperienceHeading>
 
           <p>
-            Recently started at Travel Chapter in the Guest tribe, building and
-            maintaining their customer-facing web applications, including the
-            flagship holidaycottages.co.uk. This full-stack role takes me back
-            to my roots, but now with a modern TypeScript stack.
+            Guiding development on the Guest account and Acquisitions team at
+            Travel Chapter, building and maintaining holidaycottages.co.uk and
+            other customer-facing applications. Reported to the Lead Developer.
           </p>
+
+          <ExperienceContributions>
+            <ExperienceContributionsItem>
+              Implemented self-service booking features, letting guests cancel
+              or transfer holidays and cutting call handling by 50+ hours per
+              month
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Integrated three business acquisitions into the platform,
+              launching them on a high-performance White Label site and adding
+              240 bookings per month
+            </ExperienceContributionsItem>
+          </ExperienceContributions>
         </ExperienceSection>
 
         <ExperienceSection>
@@ -140,7 +152,7 @@ export default function Resume() {
         </ExperienceSection>
 
         <ExperienceSection>
-          {/* Lead UX/Front-End Engineer at Textlocal */}
+          {/* Senior Front-End Developer at Textlocal */}
           <ExperienceHeading>
             <ExperienceDetails
               company="Textlocal"
@@ -148,7 +160,7 @@ export default function Resume() {
               serviceDates="Sep 2016 - Aug 2021"
               serviceLength="5 yrs"
             />
-            <ExperienceTitle>Lead UX/Front-End Engineer</ExperienceTitle>
+            <ExperienceTitle>Senior Front-End Developer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
@@ -177,7 +189,7 @@ export default function Resume() {
         </ExperienceSection>
 
         <ExperienceSection>
-          {/* Full-Stack Engineer at Textlocal */}
+          {/* Full-Stack Developer at Textlocal */}
           <ExperienceHeading>
             <ExperienceDetails
               company="Textlocal"
@@ -185,7 +197,7 @@ export default function Resume() {
               serviceDates="Jan 2012 - Sep 2016"
               serviceLength="4 yrs 9 mos"
             />
-            <ExperienceTitle>Full-Stack Engineer</ExperienceTitle>
+            <ExperienceTitle>Full-Stack Developer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>

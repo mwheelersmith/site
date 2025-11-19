@@ -7,8 +7,8 @@ export function Skills() {
         <li className="font-medium">Technical Leadership</li>
         <li className="font-medium">System Architecture</li>
         <li className="font-medium">TypeScript</li>
-        <li className="font-medium">React/Next.js</li>
-        <li className="font-medium">Node.js</li>
+        <li className="font-medium">React/Next.js/Node.js</li>
+        <li className="font-medium">Turborepo</li>
         <li className="font-medium">Accessibility (WCAG)</li>
         <li className="font-medium">API Design &amp; Integration</li>
         <li className="font-medium">CI/CD</li>

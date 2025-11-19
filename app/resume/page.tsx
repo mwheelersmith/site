@@ -44,9 +44,8 @@ export default function Resume() {
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
-              Implemented self-service booking features, letting guests cancel
-              or transfer holidays and cutting call handling by 50+ hours per
-              month
+              Built self-service booking tools using React Server Components and
+              Server Actions, reduced call-centre load by 50+ hours/month
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Integrated three business acquisitions into the platform,
@@ -69,42 +68,31 @@ export default function Resume() {
           </ExperienceHeading>
 
           <p>
-            Architected and built a multi-channel messaging application for the
-            Cisco Webex suite, developing core front-end features and optimising
-            performance with minimal guidance. Took ownership of complex UI
-            development, ensuring scalability and accessibility while making
-            critical technical decisions independently. Worked closely with
-            product managers, designers and directors to translate business
-            requirements into seamless user experiences. Reported to the
-            Director of Software Engineering, aligning technical decisions with
-            strategic goals in a fast-paced environment.
+            Owned front-end delivery for a flagship Webex messaging product,
+            growing and leading a 6-person squad reporting to the Director of
+            Engineering.
           </p>
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
-              Assessed business requirements to evaluate and select a tech stack
-              of Next.js, TypeScript and Tailwind, advocating its strategic
-              advantages to senior management and securing buy-in.
-            </ExperienceContributionsItem>
-            <ExperienceContributionsItem>
-              Wrote secure, high-performance code that adhered to Cisco’s
-              security policies and best practices, ensuring robustness and
-              scalability across the application.
+              Grew front-end squad from 2 to 6 engineers (+4 net hires) by
+              leading recruitment, interviewing 50+ candidates, onboarding, and
+              mentoring new team members
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Developed a Next.js user authentication system that
               reverse-proxied requests to the back end, offloading JWT storage
-              from the client side to enhance security and performance.
+              from the client side to enhance security and performance
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
-              Developed a UI component library for Webex, built on Mantine and
-              customised for consistency, accessibility and usability across
-              teams and platforms.
+              Built and drove adoption of a shared UI component library that
+              standardised design, accessibility, and usability across 3 Webex
+              front-end teams
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
-              Engineered an SMS campaign tool featuring a custom message
-              composer with support for merge fields, short links and WhatsApp
-              formatting, enhancing communication capabilities.
+              Championed and secured approval for Next.js, TypeScript, and
+              Tailwind stack, enabling faster iteration and consistent design
+              across Webex Interact front-end
             </ExperienceContributionsItem>
           </ExperienceContributions>
         </ExperienceSection>

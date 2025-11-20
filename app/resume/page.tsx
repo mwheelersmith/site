@@ -14,6 +14,8 @@ import { ExperienceContributionsItem } from "@/components/resume/experience/cont
 
 import { Education } from "@/components/resume/education";
 
+export const revalidate = 86400;
+
 export default function Resume() {
   return (
     <main className="mx-auto mb-8 flex flex-col gap-8 rounded-lg bg-white p-8 sm:p-16 lg:max-w-[1024px] lg:shadow-md dark:bg-zinc-900 dark:shadow-none">

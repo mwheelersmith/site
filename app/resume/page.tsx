@@ -27,13 +27,13 @@ export default function Resume() {
         <ExperienceSection>
           {/* Senior Developer at Travel Chapter */}
           <ExperienceHeading>
+            <ExperienceTitle>Senior Developer</ExperienceTitle>
             <ExperienceDetails
               company="Travel Chapter"
               location="Remote"
               serviceDates="May 2025 - Present"
               serviceLength={formatWorkDuration(new Date(2025, 4))}
             />
-            <ExperienceTitle>Senior Developer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
@@ -58,13 +58,13 @@ export default function Resume() {
         <ExperienceSection>
           {/* Lead Front-End Engineer at Cisco */}
           <ExperienceHeading>
+            <ExperienceTitle>Lead Front-End Engineer</ExperienceTitle>
             <ExperienceDetails
               company="Cisco"
               location="Remote"
               serviceDates="May 2023 - Dec 2024"
               serviceLength="1 yr 8 mos"
             />
-            <ExperienceTitle>Lead Front-End Engineer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
@@ -100,13 +100,13 @@ export default function Resume() {
         <ExperienceSection>
           {/* Senior Front-End Engineer at Cisco */}
           <ExperienceHeading>
+            <ExperienceTitle>Senior Front-End Engineer</ExperienceTitle>
             <ExperienceDetails
               company="Cisco"
               location="Remote"
               serviceDates="Aug 2021 - May 2023"
               serviceLength="1 yr 10 mos"
             />
-            <ExperienceTitle>Senior Front-End Engineer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
@@ -142,13 +142,13 @@ export default function Resume() {
         <ExperienceSection>
           {/* Senior Front-End Developer at Textlocal */}
           <ExperienceHeading>
+            <ExperienceTitle>Senior Front-End Developer</ExperienceTitle>
             <ExperienceDetails
               company="Textlocal"
               location="Malvern, UK"
               serviceDates="Sep 2016 - Aug 2021"
               serviceLength="5 yrs"
             />
-            <ExperienceTitle>Senior Front-End Developer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
@@ -179,13 +179,13 @@ export default function Resume() {
         <ExperienceSection>
           {/* Full-Stack Developer at Textlocal */}
           <ExperienceHeading>
+            <ExperienceTitle>Full-Stack Developer</ExperienceTitle>
             <ExperienceDetails
               company="Textlocal"
               location="Malvern, UK"
               serviceDates="Jan 2012 - Sep 2016"
               serviceLength="4 yrs 9 mos"
             />
-            <ExperienceTitle>Full-Stack Developer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>
@@ -212,13 +212,13 @@ export default function Resume() {
         <ExperienceSection>
           {/* Web Developer at Bluelinemedia */}
           <ExperienceHeading>
+            <ExperienceTitle>Web Developer</ExperienceTitle>
             <ExperienceDetails
               company="Bluelinemedia"
               location="Cheltenham, UK"
               serviceDates="Nov 2009 - Jan 2012"
               serviceLength="2 yrs 3 mos"
             />
-            <ExperienceTitle>Web Developer</ExperienceTitle>
           </ExperienceHeading>
 
           <p>

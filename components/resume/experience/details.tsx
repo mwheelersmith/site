@@ -12,18 +12,18 @@ export function ExperienceDetails({
   serviceLength: string;
 }) {
   return (
-    <div className="mb-2 flex gap-8 border-b border-zinc-200 pb-2 dark:border-zinc-600">
+    <div className="mt-2 flex flex-col gap-2 border-b border-zinc-200 pb-2 sm:flex-row sm:gap-8 dark:border-zinc-600">
       <p className="flex items-center gap-2">
         <Building2 size={16} />
         {company}
-        <span className="hidden text-sm text-zinc-500 sm:inline-block dark:text-zinc-400">
+        <span className="text-sm text-zinc-500 dark:text-zinc-400">
           &bull; {location}
         </span>
       </p>
       <p className="flex items-center gap-2">
         <Calendar size={16} />
         {serviceDates}
-        <span className="hidden text-sm text-zinc-500 sm:inline-block dark:text-zinc-400">
+        <span className="text-sm text-zinc-500 dark:text-zinc-400">
           &bull; {serviceLength}
         </span>
       </p>

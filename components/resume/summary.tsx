@@ -1,7 +1,7 @@
 export function Summary() {
   return (
     <div className="flex flex-col gap-6 border-b border-zinc-200 pb-8 dark:border-zinc-600">
-      <h2 className="text-2xl font-medium">Summary</h2>
+      <h2 className="text-2xl font-semibold">Summary</h2>
       <p>
         I&rsquo;m a Lead Developer with 15+ years of experience building
         scalable, user-centric web applications. My journey began as a

@@ -8,5 +8,7 @@ export function TypographyH1({
   classname?: string;
   children: ReactNode;
 }) {
-  return <h1 className={cn("text-3xl font-medium", classname)}>{children}</h1>;
+  return (
+    <h1 className={cn("text-3xl font-semibold", classname)}>{children}</h1>
+  );
 }

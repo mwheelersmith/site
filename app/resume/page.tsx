@@ -41,7 +41,7 @@ export default function Resume() {
           <p>
             Guiding development on the Guest account and Acquisitions team at
             Travel Chapter, building and maintaining holidaycottages.co.uk and
-            other customer-facing applications. Reported to the Lead Developer.
+            other customer-facing applications.
           </p>
 
           <ExperienceContributions>
@@ -77,24 +77,23 @@ export default function Resume() {
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
-              Grew front-end squad from 2 to 6 engineers (+4 net hires) by
-              leading recruitment, interviewing 50+ candidates, onboarding, and
-              mentoring new team members
+              Grew front-end squad from 2 to 6 engineers by leading recruitment,
+              interviewing 50+ candidates, onboarding, and mentoring new team
+              members
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Developed a Next.js user authentication system that
-              reverse-proxied requests to the back end, offloading JWT storage
+              reverse-proxied requests to the back-end, offloading JWT storage
               from the client side to enhance security and performance
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Built and drove adoption of a shared UI component library that
-              standardised design, accessibility, and usability across 3 Webex
-              front-end teams
+              standardised design, accessibility, and usability across 3 teams
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Championed and secured approval for Next.js, TypeScript, and
               Tailwind stack, enabling faster iteration and consistent design
-              across Webex Interact front-end
+              across product front-end
             </ExperienceContributionsItem>
           </ExperienceContributions>
         </ExperienceSection>
@@ -112,31 +111,29 @@ export default function Resume() {
           </ExperienceHeading>
 
           <p>
-            Played a key role in the full rebuild of a legacy product,
-            transforming it from an SMS platform into a comprehensive
-            multi-channel Webex solution. Reported to the Software Engineering
-            Lead and was promoted to Lead Front-End Engineer to oversee its
-            continued development and successful delivery.
+            Key contributor to the full rebuild of a legacy SMS platform into a
+            multi-channel Webex solution. Promoted to Lead Front-End Engineer to
+            oversee ongoing development and delivery.
           </p>
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
               Refactored the tech stack, transitioning from Java and FreeMarker
-              to a streamlined React-based front-end.
+              to a streamlined React-based front-end
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Facilitated the merger of two teams to work collaboratively in a
               new capacity, establishing a balanced front-end and back-end
-              divide.
+              divide
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Shaped the product roadmap by leveraging industry expertise,
               influencing product manager requirements and inspiring design
-              solutions.
+              solutions
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Introduced agile methodologies tailored to the needs of a new team
-              and company structure, improving development efficiency.
+              and company structure, improving development efficiency by 30%
             </ExperienceContributionsItem>
           </ExperienceContributions>
         </ExperienceSection>
@@ -154,26 +151,24 @@ export default function Resume() {
           </ExperienceHeading>
 
           <p>
-            Led a small front-end team, overseeing and contributing to the
-            redesign and engineering of the user interface. Focused on aligning
-            the design with modern UX best practices to enhance usability,
-            visual coherence, and overall user experience. Reported to the
-            Development Manager throughout the project.
+            Oversaw a front-end team responible for delivery of new product
+            features and enhancements to improve usability, visual coherence,
+            and overall user experience.
           </p>
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
-              Recruited and mentored a new front-end developer, providing
+              Recruited and mentored new front-end developers, providing
               hands-on support and training to strengthen the team&rsquo;s
-              capabilities and foster growth.
+              capabilities and foster growth
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Worked closely with back-end engineers to design APIs that met
-              business needs.
+              business needs
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Designed and built a new SMS engine powered by WebSockets to
-              enable real-time messaging.
+              enable real-time messaging
             </ExperienceContributionsItem>
           </ExperienceContributions>
         </ExperienceSection>
@@ -201,12 +196,11 @@ export default function Resume() {
             <ExperienceContributionsItem>
               Co-led the development and integration of two new products: a
               ticketing tool and a survey solution for businesses and
-              individuals, both seamlessly integrated with the core SMS
-              platform.
+              individuals, both seamlessly integrated with the core SMS platform
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Earned two industry awards for product advancements, outperforming
-              entries from major brands such as Audi and John Lewis.
+              entries from major brands such as Audi and John Lewis
             </ExperienceContributionsItem>
           </ExperienceContributions>
         </ExperienceSection>

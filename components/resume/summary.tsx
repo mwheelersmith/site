@@ -3,11 +3,12 @@ export function Summary() {
     <div className="flex flex-col gap-6 border-b border-zinc-200 pb-8 dark:border-zinc-600">
       <h2 className="text-2xl font-semibold">Summary</h2>
       <p>
-        I&rsquo;m a Lead Developer with 15+ years of experience building
-        scalable, user-centric web applications. My journey began as a
-        full-stack PHP developer, and while I&rsquo;ve spent much of my career
-        specialising in front-end engineering, I&rsquo;ve recently returned to
-        more full-stack work, now using a modern TypeScript stack.
+        I&rsquo;m a Lead Developer with 15+ years building scalable,
+        user-centric web applications. Originally a full-stack PHP developer, I
+        later specialised in front-end engineering before returning to
+        full-stack leadership with a modern TypeScript stack. I now guide teams
+        through architecture, delivery and quality to ship reliable products
+        with clarity and confidence.
       </p>
       <p className="print:hidden">
         This page is available to view on{" "}

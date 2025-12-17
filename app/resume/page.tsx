@@ -27,27 +27,64 @@ export default function Resume() {
 
       <Experience>
         <ExperienceSection>
+          {/* Lead Developer at Travel Chapter */}
+          <ExperienceHeading>
+            <ExperienceTitle>Lead Developer</ExperienceTitle>
+            <ExperienceDetails
+              company="Travel Chapter"
+              location="Remote"
+              serviceDates="October 2025 - Present"
+              serviceLength={formatWorkDuration(new Date(2025, 9))}
+            />
+          </ExperienceHeading>
+
+          <p>
+            Leading the Guest Account and Acquisitions team, mentoring team
+            members, delivering technical solutions, and defining architecture
+            for onboarding acquisitions onto a White Label platform, while
+            empowering guests to self-serve bookings.
+          </p>
+
+          <ExperienceContributions>
+            <ExperienceContributionsItem>
+              Pioneered a new team structure across the Guest Experience Group,
+              increasing squad autonomy and accelerating feature ownership
+              across four product areas
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Managed a squad of six developers, streamlining onboarding and
+              driving performance and goal achievement
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Supported a team member who was struggling with delivery, helping
+              them grow into a reliable contributor through clear expectations,
+              structured guidance, and regular coaching
+            </ExperienceContributionsItem>
+          </ExperienceContributions>
+        </ExperienceSection>
+
+        <ExperienceSection>
           {/* Senior Developer at Travel Chapter */}
           <ExperienceHeading>
             <ExperienceTitle>Senior Developer</ExperienceTitle>
             <ExperienceDetails
               company="Travel Chapter"
               location="Remote"
-              serviceDates="May 2025 - Present"
-              serviceLength={formatWorkDuration(new Date(2025, 4))}
+              serviceDates="May 2025 - October 2025"
+              serviceLength="5 mos"
             />
           </ExperienceHeading>
 
           <p>
-            Guiding development on the Guest account and Acquisitions team at
-            Travel Chapter, building and maintaining holidaycottages.co.uk and
-            other customer-facing applications.
+            Guided development across the Guest Experience Group, building and
+            maintaining holidaycottages.co.uk and other customer-facing
+            applications.
           </p>
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
               Built self-service booking tools using React Server Components and
-              Server Actions, reduced call-centre load by 50+ hours/month
+              Server Actions, reducing call-centre load by 50+ hours per month
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Integrated three business acquisitions into the platform,
@@ -71,15 +108,15 @@ export default function Resume() {
 
           <p>
             Owned front-end delivery for a flagship Webex messaging product,
-            growing and leading a 6-person squad reporting to the Director of
+            growing and leading a six-person squad reporting to the Director of
             Engineering.
           </p>
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
-              Grew front-end squad from 2 to 6 engineers by leading recruitment,
-              interviewing 50+ candidates, onboarding, and mentoring new team
-              members
+              Grew front-end squad from two to six engineers by leading
+              recruitment, interviewing 50+ candidates, onboarding, and
+              mentoring new team members
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Developed a Next.js user authentication system that
@@ -88,7 +125,8 @@ export default function Resume() {
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Built and drove adoption of a shared UI component library that
-              standardised design, accessibility, and usability across 3 teams
+              standardised design, accessibility, and usability across three
+              teams
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
               Championed and secured approval for Next.js, TypeScript, and
@@ -151,7 +189,7 @@ export default function Resume() {
           </ExperienceHeading>
 
           <p>
-            Oversaw a front-end team responible for delivery of new product
+            Oversaw a front-end team responsible for delivery of new product
             features and enhancements to improve usability, visual coherence,
             and overall user experience.
           </p>
@@ -188,18 +226,17 @@ export default function Resume() {
           <p>
             Worked in a small, cross-functional team spanning UI design,
             front-end and back-end development, delivering new features and
-            platform improvements for over 160,000 multinational users. Reported
-            directly to the business founder.
+            platform improvements for over 160,000 multinational users.
           </p>
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
               Co-led the development and integration of two new products: a
-              ticketing tool and a survey solution for businesses and
-              individuals, both seamlessly integrated with the core SMS platform
+              ticketing tool and a survey solution, both seamlessly integrated
+              with the core SMS platform
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
-              Earned two industry awards for product advancements, outperforming
+              Earned industry awards for product advancements, outperforming
               entries from major brands such as Audi and John Lewis
             </ExperienceContributionsItem>
           </ExperienceContributions>
@@ -220,9 +257,7 @@ export default function Resume() {
           <p>
             Developed a diverse range of websites for clients at a small web
             agency, including brochure sites, e-commerce platforms and
-            CMS-driven solutions. Gained hands-on experience in front-end and
-            back-end development while managing client relationships to ensure
-            their needs were met throughout the process.
+            CMS-driven solutions.
           </p>
         </ExperienceSection>
       </Experience>

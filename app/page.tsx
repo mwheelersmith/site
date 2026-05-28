@@ -10,10 +10,11 @@ export default function Home() {
       <div className="flex flex-col gap-16 overflow-hidden rounded-xl border-zinc-200 pb-8 md:border dark:border-zinc-800">
         <Image
           className="self-center rounded-xl md:rounded-none"
-          src="/miles-banner.jpg"
+          src="/miles-banner-2026.jpg"
           width={640}
           height={427}
-          alt="Miles smiling by a sunlit swimming pool."
+          alt="Professional portait of Miles smiling."
+          loading="eager"
         />
 
         <div className="flex flex-col gap-16 px-8 sm:px-16">

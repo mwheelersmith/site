@@ -56,6 +56,18 @@ export default function Resume() {
               driving performance and goal achievement
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
+              Worked cross-functionally with delivery managers, product owners,
+              and programme leadership to align team delivery to a 6–12 month
+              company roadmap, enabling onboarding of 500+ new properties,
+              expanding self-service, and prioritising high-impact technical
+              debt reduction
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
+              Led a team to automate acquisition website onboarding across tens
+              of sites, reducing setup time from two weeks to three days while
+              significantly lowering manual effort and human error
+            </ExperienceContributionsItem>
+            <ExperienceContributionsItem>
               Supported a team member who was struggling with delivery, helping
               them grow into a reliable contributor through clear expectations,
               structured guidance, and regular coaching

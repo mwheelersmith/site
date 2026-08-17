@@ -16,7 +16,7 @@ export function NavLinks() {
         className={cn(
           "flex items-center gap-2 rounded-full px-4 py-2 font-medium hover:text-violet-800 dark:hover:text-violet-400",
           pathname === "/"
-            ? "bg-violet-800 text-white shadow-lg shadow-violet-400/80 outline outline-1 outline-violet-950 hover:text-white dark:shadow-violet-600/80 dark:hover:text-white"
+            ? "bg-violet-800 text-white shadow-lg shadow-violet-400/80 outline-solid outline-1 outline-violet-950 hover:text-white dark:shadow-violet-600/80 dark:hover:text-white"
             : "",
         )}
       >
@@ -28,7 +28,7 @@ export function NavLinks() {
         className={cn(
           "flex items-center gap-2 rounded-full px-4 py-2 font-medium hover:text-violet-800 dark:hover:text-violet-400",
           pathname === "/resume"
-            ? "bg-violet-800 text-white shadow-lg shadow-violet-400/80 outline outline-1 outline-violet-950 hover:text-white dark:shadow-violet-600/80 dark:hover:text-white"
+            ? "bg-violet-800 text-white shadow-lg shadow-violet-400/80 outline-solid outline-1 outline-violet-950 hover:text-white dark:shadow-violet-600/80 dark:hover:text-white"
             : "",
         )}
       >

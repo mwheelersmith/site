@@ -4,8 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-import { Hand, FileUser } from "lucide-react";
-
 export function NavLinks() {
   const pathname = usePathname();
 
@@ -13,27 +11,23 @@ export function NavLinks() {
     <>
       <Link
         href="/"
+        aria-current={pathname === "/" ? "page" : undefined}
         className={cn(
-          "flex items-center gap-2 rounded-full px-4 py-2 font-medium hover:text-violet-800 dark:hover:text-violet-400",
-          pathname === "/"
-            ? "bg-violet-800 text-white shadow-lg shadow-violet-400/80 outline-solid outline-1 outline-violet-950 hover:text-white dark:shadow-violet-600/80 dark:hover:text-white"
-            : "",
+          "text-foreground hover:text-accent inline-flex min-h-11 items-center border-b-2 border-transparent px-2 py-2 font-mono text-sm transition-colors motion-reduce:transition-none",
+          pathname === "/" ? "border-accent text-accent" : "",
         )}
       >
-        <Hand size={16} />
         Hello
       </Link>
       <Link
-        href="/resume"
+        href="/cv"
+        aria-current={pathname === "/cv" ? "page" : undefined}
         className={cn(
-          "flex items-center gap-2 rounded-full px-4 py-2 font-medium hover:text-violet-800 dark:hover:text-violet-400",
-          pathname === "/resume"
-            ? "bg-violet-800 text-white shadow-lg shadow-violet-400/80 outline-solid outline-1 outline-violet-950 hover:text-white dark:shadow-violet-600/80 dark:hover:text-white"
-            : "",
+          "text-foreground hover:text-accent inline-flex min-h-11 items-center border-b-2 border-transparent px-2 py-2 font-mono text-sm transition-colors motion-reduce:transition-none",
+          pathname === "/cv" ? "border-accent text-accent" : "",
         )}
       >
-        <FileUser size={16} />
-        Resume
+        CV
       </Link>
     </>
   );

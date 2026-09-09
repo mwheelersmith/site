@@ -1,40 +1,502 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-border: var(--border);
+  --color-selection: var(--selection);
   --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+:root {
+  --background: #f5f0ed;
+  --surface: #fffaf7;
+  --foreground: #302725;
+  --muted: #71615b;
+  --accent: #805b52;
+  --accent-hover: #69473f;
+  --on-accent: #fffaf7;
+  --border: #d5c6bf;
+  --selection: #e4cbc3;
+}
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
+.dark {
+  --background: #0b0909;
+  --surface: #141111;
+  --foreground: #ded5d2;
+  --muted: #b0a09b;
+  --accent: #b7978f;
+  --accent-hover: #d0b3aa;
+  --on-accent: #0b0909;
+  --border: #443936;
+  --selection: #59423c;
+}
+
 @layer base {
+  html {
+    /* Reserve scrollbar space so centered content stays put between routes. */
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    isolation: isolate;
+  }
+
+  main {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* The decorative texture stays beneath content and never intercepts input. */
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    inset: -24px;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--accent);
+    opacity: 0.48;
+    mask-image:
+      url("/pixel-texture.svg"),
+      linear-gradient(
+        to right,
+        #000,
+        #0008 5%,
+        transparent 16%,
+        transparent 84%,
+        #0008 95%,
+        #000
+      );
+    mask-size:
+      256px 512px,
+      100% 100%;
+    mask-repeat: repeat, no-repeat;
+    mask-composite: intersect;
+  }
+
+  body::after {
+    opacity: 0.34;
+    mask-image:
+      url("/pixel-texture-sparkle.svg"),
+      linear-gradient(
+        to right,
+        #000,
+        #0008 5%,
+        transparent 16%,
+        transparent 84%,
+        #0008 95%,
+        #000
+      );
+    mask-size:
+      320px 576px,
+      100% 100%;
+  }
+
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--border);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-geist-mono), monospace;
+  }
+
+  h1 {
+    color: var(--accent);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+
+  button {
+    cursor: pointer;
   }
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.cv-bullets > li {
+  position: relative;
+  padding-left: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.cv-bullets > li::before {
+  content: "";
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border: 2px solid var(--muted);
+}
+
+.home-portrait img {
+  filter: saturate(0.65) sepia(0.12);
+}
+
+.dark .home-portrait img {
+  filter: saturate(0.5) sepia(0.16) brightness(0.94);
+}
+
+/* Shared editorial layout; print rules below restore a compact document. */
+.identity-heading {
+  font-size: clamp(2rem, 7.2vw, 5.75rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.cv-identity .identity-heading {
+  font-size: clamp(2rem, 7.5vw, 6rem);
+}
+
+.portrait-frame::before,
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  pointer-events: none;
+}
+
+.portrait-frame::before {
+  top: -4px;
+  left: -4px;
+}
+.portrait-frame::after {
+  bottom: -4px;
+  right: -4px;
+}
+
+.cv-section {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.cv-section-label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cv-section-content {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.editorial-link {
+  color: var(--foreground);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 0.35rem;
+}
+
+.editorial-link:hover,
+.editorial-link:focus-visible {
+  color: var(--accent);
+}
+
+@media screen {
+  .cv-section .cv-bullets > li {
+    padding-left: 1.5rem;
+  }
+
+  .cv-section .cv-bullets > li::before {
+    width: 6px;
+    height: 6px;
+    border: 3px solid var(--accent);
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .editorial-link {
+    transition: color 200ms ease;
+  }
+}
+
+/* Email uses colour feedback; only the newly revealed address fades in. */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .email-reveal-address {
+    animation: email-reveal-in 240ms ease-out both;
+  }
+}
+
+@keyframes email-reveal-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .cv-section {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 3rem;
+  }
+  .cv-section-content {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 48rem) and (prefers-reduced-motion: no-preference) {
+  body::before {
+    animation:
+      pixel-drift 60s linear infinite,
+      pixel-twinkle 11s ease-in-out infinite;
+  }
+
+  body::after {
+    --texture-travel: -576px;
+    animation:
+      pixel-drift 54s linear -18s infinite,
+      pixel-twinkle 17s ease-in-out -7s infinite;
+  }
+
+  body[data-texture-paused="true"]::before,
+  body[data-texture-paused="true"]::after {
+    animation-play-state: paused;
+    transition: none;
+  }
+}
+
+/* Slow opacity changes, never flashes or a glow behind the page. */
+@keyframes pixel-twinkle {
+  0%,
+  100% {
+    opacity: 0.32;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+@keyframes pixel-drift {
+  to {
+    /* Move one complete tile for a seamless loop; keep the edge mask fixed. */
+    mask-position:
+      0 var(--texture-travel, -512px),
+      0 0;
+  }
+}
+
+/* Keep the CV legible on paper regardless of the selected screen theme. */
+@media print {
+  @page {
+    margin: 16mm;
+  }
+
+  html {
+    color-scheme: light !important;
+    scrollbar-gutter: auto;
+  }
+
+  body {
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  .site-container {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+  }
+
+  .cv-page {
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cv-page > * {
+    margin-bottom: 5mm;
+  }
+
+  .cv-page > .cv-identity {
+    gap: 2.5mm;
+    padding: 0 0 6mm;
+    margin: 0;
+  }
+
+  .cv-section {
+    display: block;
+    padding: 5mm 0;
+    margin: 0;
+  }
+
+  .cv-section-label {
+    margin-bottom: 3mm;
+    font-size: 12pt;
+    font-family: var(--font-geist-mono), monospace;
+    color: var(--foreground);
+    font-weight: 600;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
+  .cv-section-content {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .cv-education {
+    gap: 3mm;
+  }
+
+  .cv-identity .identity-heading {
+    font-size: 26pt;
+    letter-spacing: -0.035em;
+    line-height: 1.2;
+  }
+
+  .cv-identity .identity-heading span {
+    color: var(--foreground);
+  }
+
+  .cv-section-number {
+    color: var(--accent);
+    font-size: 9pt;
+    font-weight: 400;
+  }
+
+  .cv-role-line {
+    color: var(--muted);
+    font-size: 10pt;
+  }
+
+  .cv-contact-details {
+    column-gap: 5mm;
+    row-gap: 2mm;
+    font-family: var(--font-geist-sans), sans-serif;
+    font-size: 9pt;
+  }
+
+  .cv-contact-details svg {
+    color: #000;
+  }
+
+  .cv-entry-title {
+    font-size: 12pt;
+  }
+
+  .cv-entry-details {
+    font-size: 9pt;
+  }
+
+  .cv-page .editorial-link {
+    padding-bottom: 0;
+    border: 0;
+    color: var(--accent);
+  }
+
+  .cv-page .contributions-label {
+    color: var(--foreground);
+    font-family: var(--font-geist-sans), sans-serif;
+    font-size: inherit;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
+  .cv-page h1,
+  .cv-page h2,
+  .cv-page h3,
+  .cv-role-heading {
+    break-after: avoid;
+    break-inside: avoid;
+  }
+
+  .cv-page p,
+  .cv-page li {
+    orphans: 3;
+    widows: 3;
+    line-height: 1.45;
+  }
+
+  .cv-page p,
+  .cv-contributions {
+    max-width: none;
+  }
+
+  .cv-page li {
+    break-inside: avoid;
+  }
+
+  /* Let long roles span pages instead of leaving large blank areas. */
+  .cv-experience,
+  .cv-role,
+  .cv-contributions,
+  .cv-contributions ul {
+    display: block;
+  }
+
+  .cv-role {
+    margin-top: 5mm;
+    padding-top: 5mm;
+  }
+
+  .cv-role:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .cv-page [data-cv-skills] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 2mm;
+  }
+
+  .cv-role > *,
+  .cv-contributions li {
+    margin-bottom: 3mm;
+  }
+
+  .cv-contributions > p {
+    margin-bottom: 2mm;
+    break-after: avoid;
+  }
+
+  .cv-page a:focus-visible,
+  .cv-page:focus-visible {
+    outline: none;
+  }
+
+  body::before,
+  body::after {
+    display: none;
+  }
+
+  :root,
+  .dark {
+    --background: #ffffff;
+    --surface: #ffffff;
+    --foreground: #302725;
+    --muted: #71615b;
+    --accent: #805b52;
+    --border: #d5c6bf;
   }
 }

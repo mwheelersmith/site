@@ -1,65 +1,44 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
-
-import { Sun, Monitor, Moon } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { TooltipButton } from "@/components/ui/tooltip-button";
+
+const subscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
 
 const ThemeSwitcher = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  // Keep the server and hydration render identical until the theme is available.
+  const mounted = useSyncExternalStore(
+    subscribe,
+    getClientSnapshot,
+    getServerSnapshot,
+  );
+  const { resolvedTheme, setTheme } = useTheme();
 
-  // useEffect only runs on the client, so now we can safely show the UI
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
+  const isDark = mounted && resolvedTheme === "dark";
+  const label = isDark ? "Switch to light theme" : "Switch to dark theme";
 
   return (
-    <div className="mt-4 flex justify-center gap-2 md:absolute md:left-4 md:top-4 md:mt-0">
-      <button
-        onClick={() => setTheme("light")}
-        className={cn(
-          "rounded-full p-2 text-zinc-500 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50",
-          theme === "light"
-            ? "bg-zinc-200 text-zinc-950 dark:bg-zinc-700 dark:text-zinc-200"
-            : "",
-        )}
-        title="Light Theme"
-      >
-        <Sun size={16} />
-      </button>
-
-      <button
-        onClick={() => setTheme("system")}
-        className={cn(
-          "rounded-full p-2 text-zinc-500 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50",
-          theme === "system"
-            ? "bg-zinc-200 text-zinc-950 dark:bg-zinc-700 dark:text-zinc-200"
-            : "",
-        )}
-        title="System Theme"
-      >
-        <Monitor size={16} />
-      </button>
-
-      <button
-        onClick={() => setTheme("dark")}
-        className={cn(
-          "rounded-full p-2 text-zinc-500 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50",
-          theme === "dark"
-            ? "bg-zinc-200 text-zinc-950 dark:bg-zinc-700 dark:text-zinc-200"
-            : "",
-        )}
-        title="Dark Theme"
-      >
-        <Moon size={16} />
-      </button>
-    </div>
+    <TooltipButton
+      type="button"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      disabled={!mounted}
+      label={label}
+      className={cn(
+        "border-border bg-surface text-foreground hover:border-accent hover:text-accent flex w-11 shrink-0 items-center justify-center self-stretch border transition-colors duration-200 motion-reduce:transition-none",
+        !mounted && "invisible",
+      )}
+    >
+      {isDark ? (
+        <Sun size={16} aria-hidden="true" />
+      ) : (
+        <Moon size={16} aria-hidden="true" />
+      )}
+    </TooltipButton>
   );
 };
 

@@ -1,38 +1,60 @@
 import Image from "next/image";
-
 import { Hello } from "@/components/home/hello";
 import { LinksList } from "@/components/links-list";
 import { LinksListItem } from "@/components/links-list-item";
 
 export default function Home() {
   return (
-    <main className="mx-2 flex flex-col md:mx-auto md:w-[640px]">
-      <div className="flex flex-col gap-16 overflow-hidden rounded-xl border-zinc-200 pb-8 md:border dark:border-zinc-800">
-        <Image
-          className="self-center rounded-xl md:rounded-none"
-          src="/miles-banner-2026.jpg"
-          width={640}
-          height={427}
-          alt="Professional portait of Miles smiling."
-          loading="eager"
-        />
-
-        <div className="flex flex-col gap-16 px-8 sm:px-16">
-          <Hello />
-
-          <LinksList>
-            <LinksListItem href="https://www.linkedin.com/in/mwheelersmith">
-              LinkedIn
-            </LinksListItem>
-            <LinksListItem href="https://github.com/mwheelersmith">
-              GitHub
-            </LinksListItem>
-            <LinksListItem href="https://cal.com/mwheelersmith">
-              Schedule a Call
-            </LinksListItem>
-          </LinksList>
-        </div>
+    <main id="main-content" tabIndex={-1} className="home-page mb-8 w-full">
+      <div className="grid items-center gap-12 py-12 md:grid-cols-[minmax(0,1fr)_minmax(220px,30%)] md:gap-10 lg:gap-12 lg:py-16">
+        <Hello />
+        <figure className="mx-auto w-full max-w-[340px] md:mx-0 md:justify-self-end">
+          <div className="portrait-frame relative">
+            <div className="home-portrait border-border relative aspect-[3/4] overflow-hidden border">
+              <Image
+                className="object-cover object-[50%_35%]"
+                src="/miles-avatar.webp"
+                fill
+                sizes="(min-width: 1280px) 340px, (min-width: 768px) 30vw, (min-width: 380px) 340px, calc(100vw - 2rem)"
+                quality={90}
+                alt="Professional portrait of Miles smiling."
+                loading="eager"
+              />
+            </div>
+          </div>
+          <figcaption className="mt-4 space-y-1 font-mono text-sm">
+            <p>Miles Wheeler-Smith</p>
+            <p className="text-muted">Lead Developer</p>
+          </figcaption>
+        </figure>
       </div>
+      <section
+        aria-label="Career overview"
+        className="border-border grid gap-6 border-y py-7 font-mono text-sm md:grid-cols-[0.6fr_1fr_1.2fr] md:gap-8"
+      >
+        <h2 className="text-muted text-xs tracking-[0.16em] uppercase">
+          Experience
+        </h2>
+        <div className="border-border space-y-2 md:border-l md:pl-8">
+          <p>Travel Chapter</p>
+          <p className="text-muted">Lead Developer · 2025–present</p>
+        </div>
+        <div className="border-border space-y-2 md:border-l md:pl-8">
+          <p>Previously at Cisco &amp; Textlocal</p>
+          <p className="text-muted">Building for the web since 2009</p>
+        </div>
+      </section>
+      <LinksList>
+        <LinksListItem href="https://www.linkedin.com/in/mwheelersmith">
+          LinkedIn
+        </LinksListItem>
+        <LinksListItem href="https://github.com/mwheelersmith">
+          GitHub
+        </LinksListItem>
+        <LinksListItem href="https://cal.com/mwheelersmith">
+          Schedule a Call
+        </LinksListItem>
+      </LinksList>
     </main>
   );
 }

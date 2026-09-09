@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { ChevronRight } from "lucide-react";
+import { AnimatedArrow } from "@/components/ui/animated-arrow";
 
 export function LinksListItem({
   href,
@@ -12,13 +12,10 @@ export function LinksListItem({
   return (
     <a
       href={href}
-      className="group inline-flex items-center gap-1 text-violet-800 decoration-2 hover:text-violet-900 hover:underline hover:underline-offset-8 dark:text-violet-500 dark:hover:text-violet-300"
+      className="group text-foreground hover:text-accent focus-visible:text-accent inline-flex min-h-6 items-center gap-2 font-mono text-sm decoration-2 underline-offset-4 transition-colors duration-200 hover:underline focus-visible:underline motion-reduce:transition-none"
     >
       {children}
-      <ChevronRight
-        size={16}
-        className="transition-transform group-hover:translate-x-1"
-      />
+      <AnimatedArrow />
     </a>
   );
 }

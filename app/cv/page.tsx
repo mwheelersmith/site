@@ -1,24 +1,29 @@
+import type { Metadata } from "next";
 import formatWorkDuration from "@/lib/format-work-duration";
 
-import { Header } from "@/components/resume/header";
-import { Summary } from "@/components/resume/summary";
-import { Skills } from "@/components/resume/skills";
+import { Header } from "@/components/cv/header";
+import { Summary } from "@/components/cv/summary";
+import { Skills } from "@/components/cv/skills";
 
-import { Experience } from "@/components/resume/experience/experience";
-import { ExperienceSection } from "@/components/resume/experience/section";
-import { ExperienceHeading } from "@/components/resume/experience/heading";
-import { ExperienceTitle } from "@/components/resume/experience/title";
-import { ExperienceDetails } from "@/components/resume/experience/details";
-import { ExperienceContributions } from "@/components/resume/experience/contributions";
-import { ExperienceContributionsItem } from "@/components/resume/experience/contributions-item";
+import { Experience } from "@/components/cv/experience/experience";
+import { ExperienceSection } from "@/components/cv/experience/section";
+import { ExperienceHeading } from "@/components/cv/experience/heading";
+import { ExperienceTitle } from "@/components/cv/experience/title";
+import { ExperienceDetails } from "@/components/cv/experience/details";
+import { ExperienceContributions } from "@/components/cv/experience/contributions";
+import { ExperienceContributionsItem } from "@/components/cv/experience/contributions-item";
 
-import { Education } from "@/components/resume/education";
+import { Education } from "@/components/cv/education";
+
+export const metadata: Metadata = {
+  title: "CV | Miles Wheeler-Smith",
+};
 
 export const revalidate = 86400;
 
-export default function Resume() {
+export default function Cv() {
   return (
-    <main className="mx-auto mb-8 flex flex-col gap-8 rounded-lg bg-white p-8 sm:p-16 lg:max-w-[1024px] lg:shadow-md dark:bg-zinc-900 dark:shadow-none">
+    <main id="main-content" tabIndex={-1} className="cv-page mb-8">
       <Header />
 
       <Summary />
@@ -29,11 +34,12 @@ export default function Resume() {
         <ExperienceSection>
           {/* Lead Developer at Travel Chapter */}
           <ExperienceHeading>
-            <ExperienceTitle>Lead Developer</ExperienceTitle>
+            <ExperienceTitle company="Travel Chapter">
+              Lead Developer
+            </ExperienceTitle>
             <ExperienceDetails
-              company="Travel Chapter"
               location="Remote"
-              serviceDates="October 2025 - Present"
+              serviceDates="Oct 2025 - Present"
               serviceLength={formatWorkDuration(new Date(2025, 9))}
             />
           </ExperienceHeading>
@@ -78,11 +84,12 @@ export default function Resume() {
         <ExperienceSection>
           {/* Senior Developer at Travel Chapter */}
           <ExperienceHeading>
-            <ExperienceTitle>Senior Developer</ExperienceTitle>
+            <ExperienceTitle company="Travel Chapter">
+              Senior Developer
+            </ExperienceTitle>
             <ExperienceDetails
-              company="Travel Chapter"
               location="Remote"
-              serviceDates="May 2025 - October 2025"
+              serviceDates="May 2025 - Oct 2025"
               serviceLength="5 mos"
             />
           </ExperienceHeading>
@@ -109,9 +116,10 @@ export default function Resume() {
         <ExperienceSection>
           {/* Lead Front-End Engineer at Cisco */}
           <ExperienceHeading>
-            <ExperienceTitle>Lead Front-End Engineer</ExperienceTitle>
+            <ExperienceTitle company="Cisco">
+              Lead Front-End Engineer
+            </ExperienceTitle>
             <ExperienceDetails
-              company="Cisco"
               location="Remote"
               serviceDates="May 2023 - Dec 2024"
               serviceLength="1 yr 8 mos"
@@ -151,9 +159,10 @@ export default function Resume() {
         <ExperienceSection>
           {/* Senior Front-End Engineer at Cisco */}
           <ExperienceHeading>
-            <ExperienceTitle>Senior Front-End Engineer</ExperienceTitle>
+            <ExperienceTitle company="Cisco">
+              Senior Front-End Engineer
+            </ExperienceTitle>
             <ExperienceDetails
-              company="Cisco"
               location="Remote"
               serviceDates="Aug 2021 - May 2023"
               serviceLength="1 yr 10 mos"
@@ -191,9 +200,10 @@ export default function Resume() {
         <ExperienceSection>
           {/* Senior Front-End Developer at Textlocal */}
           <ExperienceHeading>
-            <ExperienceTitle>Senior Front-End Developer</ExperienceTitle>
+            <ExperienceTitle company="Textlocal">
+              Senior Front-End Developer
+            </ExperienceTitle>
             <ExperienceDetails
-              company="Textlocal"
               location="Malvern, UK"
               serviceDates="Sep 2016 - Aug 2021"
               serviceLength="5 yrs"
@@ -226,9 +236,10 @@ export default function Resume() {
         <ExperienceSection>
           {/* Full-Stack Developer at Textlocal */}
           <ExperienceHeading>
-            <ExperienceTitle>Full-Stack Developer</ExperienceTitle>
+            <ExperienceTitle company="Textlocal">
+              Full-Stack Developer
+            </ExperienceTitle>
             <ExperienceDetails
-              company="Textlocal"
               location="Malvern, UK"
               serviceDates="Jan 2012 - Sep 2016"
               serviceLength="4 yrs 9 mos"
@@ -257,9 +268,10 @@ export default function Resume() {
         <ExperienceSection>
           {/* Web Developer at Bluelinemedia */}
           <ExperienceHeading>
-            <ExperienceTitle>Web Developer</ExperienceTitle>
+            <ExperienceTitle company="Bluelinemedia">
+              Web Developer
+            </ExperienceTitle>
             <ExperienceDetails
-              company="Bluelinemedia"
               location="Cheltenham, UK"
               serviceDates="Nov 2009 - Jan 2012"
               serviceLength="2 yrs 3 mos"
@@ -275,6 +287,18 @@ export default function Resume() {
       </Experience>
 
       <Education />
+      <footer className="border-border border-t py-6 print:hidden">
+        <p className="text-muted font-mono text-sm leading-relaxed print:hidden">
+          This page is available to view on{" "}
+          <a
+            className="text-accent hover:text-accent-hover underline decoration-2 underline-offset-4 hover:underline"
+            href="https://github.com/mwheelersmith/site/blob/main/app/cv/page.tsx"
+          >
+            GitHub
+          </a>
+          .
+        </p>
+      </footer>
     </main>
   );
 }

@@ -6,9 +6,9 @@ import { LinksListItem } from "@/components/links-list-item";
 export default function Home() {
   return (
     <main id="main-content" tabIndex={-1} className="home-page mb-8 w-full">
-      <div className="grid items-center gap-12 py-12 md:grid-cols-[minmax(0,1fr)_minmax(220px,30%)] md:gap-10 lg:gap-12 lg:py-16">
+      <div className="grid items-start gap-12 py-12 md:grid-cols-[minmax(0,1fr)_minmax(220px,30%)] md:gap-10 lg:gap-12 lg:py-16">
         <Hello />
-        <figure className="mx-auto w-full max-w-[340px] md:mx-0 md:justify-self-end">
+        <figure className="w-full max-w-[340px] md:self-center md:justify-self-end">
           <div className="portrait-frame relative">
             <div className="home-portrait border-border relative aspect-[3/4] overflow-hidden border">
               <Image
@@ -22,10 +22,6 @@ export default function Home() {
               />
             </div>
           </div>
-          <figcaption className="mt-4 space-y-1 font-mono text-sm">
-            <p>Miles Wheeler-Smith</p>
-            <p className="text-muted">Lead Developer</p>
-          </figcaption>
         </figure>
       </div>
       <section

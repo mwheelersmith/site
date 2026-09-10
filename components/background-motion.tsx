@@ -1,11 +1,56 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { Pause, Play } from "lucide-react";
 import { TooltipButton } from "@/components/ui/tooltip-button";
 
+const storageKey = "background-motion-paused";
+const changeEvent = "background-motion-preference-change";
+let fallbackPaused = false;
+let storageUnavailable = false;
+
+function getPreference() {
+  if (storageUnavailable) return fallbackPaused;
+  try {
+    return window.localStorage.getItem(storageKey) === "true";
+  } catch {
+    return fallbackPaused;
+  }
+}
+
+function subscribe(onChange: () => void) {
+  const onStorage = (event: StorageEvent) => {
+    if (event.key === storageKey || event.key === null) onChange();
+  };
+  window.addEventListener("storage", onStorage);
+  window.addEventListener(changeEvent, onChange);
+  return () => {
+    window.removeEventListener("storage", onStorage);
+    window.removeEventListener(changeEvent, onChange);
+  };
+}
+
+const getServerPreference = () => null;
+
 export function BackgroundMotion() {
-  const [paused, setPaused] = useState(false);
+  const preference = useSyncExternalStore(
+    subscribe,
+    getPreference,
+    getServerPreference,
+  );
+  // Start still until the saved preference is known, avoiding a flash of motion.
+  const paused = preference ?? true;
+
+  const toggleMotion = () => {
+    fallbackPaused = !paused;
+    try {
+      window.localStorage.setItem(storageKey, String(fallbackPaused));
+    } catch {
+      // The control still works for this visit when storage is unavailable.
+      storageUnavailable = true;
+    }
+    window.dispatchEvent(new Event(changeEvent));
+  };
   const label = paused ? "Resume background motion" : "Pause background motion";
 
   useEffect(() => {
@@ -21,7 +66,8 @@ export function BackgroundMotion() {
       <TooltipButton
         type="button"
         label={label}
-        onClick={() => setPaused((value) => !value)}
+        onClick={toggleMotion}
+        disabled={preference === null}
         className="border-border bg-surface text-foreground hover:border-accent hover:text-accent flex w-11 items-center justify-center self-stretch border transition-colors duration-200 motion-reduce:transition-none"
       >
         {paused ? (

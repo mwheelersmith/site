@@ -47,6 +47,7 @@
   }
 
   body {
+    position: relative;
     isolation: isolate;
   }
 
@@ -55,26 +56,50 @@
     overflow-wrap: anywhere;
   }
 
-  /* The decorative texture stays beneath content and never intercepts input. */
-  body::before,
-  body::after {
-    content: "";
-    position: fixed;
-    inset: -24px;
-    z-index: -1;
+  /* Follow the document without letting overscan enlarge its scrollable area. */
+  .pixel-background {
+    position: absolute;
+    inset: 0;
+    overflow: clip;
     pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Clip each pair of animated layers to its own narrow edge strip. */
+  .pixel-edge {
+    position: absolute;
+    top: -24px;
+    bottom: -24px;
+    width: calc(16vw + 8px);
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    --pixel-fade-direction: to right;
+  }
+
+  .pixel-edge-left {
+    left: -24px;
+  }
+
+  .pixel-edge-right {
+    right: -24px;
+    --pixel-fade-direction: to left;
+  }
+
+  .pixel-edge::before,
+  .pixel-edge::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     background: var(--accent);
     opacity: 0.48;
     mask-image:
       url("/pixel-texture.svg"),
       linear-gradient(
-        to right,
+        var(--pixel-fade-direction),
         #000,
-        #0008 5%,
-        transparent 16%,
-        transparent 84%,
-        #0008 95%,
-        #000
+        #0008 31.25%,
+        transparent
       );
     mask-size:
       256px 512px,
@@ -83,22 +108,26 @@
     mask-composite: intersect;
   }
 
-  body::after {
+  .pixel-edge::after {
     opacity: 0.34;
     mask-image:
       url("/pixel-texture-sparkle.svg"),
       linear-gradient(
-        to right,
+        var(--pixel-fade-direction),
         #000,
-        #0008 5%,
-        transparent 16%,
-        transparent 84%,
-        #0008 95%,
-        #000
+        #0008 31.25%,
+        transparent
       );
     mask-size:
       320px 576px,
       100% 100%;
+  }
+
+  .pixel-edge-right::before,
+  .pixel-edge-right::after {
+    mask-position:
+      right top,
+      0 0;
   }
 
   *,
@@ -159,10 +188,6 @@
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.055em;
-}
-
-.cv-identity .identity-heading {
-  font-size: clamp(2rem, 7.5vw, 6rem);
 }
 
 .portrait-frame::before,
@@ -261,21 +286,28 @@
 }
 
 @media screen and (min-width: 48rem) and (prefers-reduced-motion: no-preference) {
-  body::before {
+  .pixel-edge::before,
+  .pixel-edge::after {
+    /* Extra tile coverage lets the rasterized layers move without exposing an edge. */
+    bottom: var(--texture-travel, -512px);
+    will-change: transform, opacity;
+  }
+
+  .pixel-edge::before {
     animation:
       pixel-drift 60s linear infinite,
       pixel-twinkle 11s ease-in-out infinite;
   }
 
-  body::after {
+  .pixel-edge::after {
     --texture-travel: -576px;
     animation:
       pixel-drift 54s linear -18s infinite,
       pixel-twinkle 17s ease-in-out -7s infinite;
   }
 
-  body[data-texture-paused="true"]::before,
-  body[data-texture-paused="true"]::after {
+  body:not([data-texture-paused="false"]) .pixel-edge::before,
+  body:not([data-texture-paused="false"]) .pixel-edge::after {
     animation-play-state: paused;
     transition: none;
   }
@@ -294,10 +326,8 @@
 
 @keyframes pixel-drift {
   to {
-    /* Move one complete tile for a seamless loop; keep the edge mask fixed. */
-    mask-position:
-      0 var(--texture-travel, -512px),
-      0 0;
+    /* A whole tile makes the loop seamless; the horizontal fade is unchanged. */
+    transform: translate3d(0, var(--texture-travel, -512px), 0);
   }
 }
 
@@ -485,8 +515,7 @@
     outline: none;
   }
 
-  body::before,
-  body::after {
+  .pixel-edge {
     display: none;
   }
 

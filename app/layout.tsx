@@ -27,6 +27,10 @@ export default function RootLayout({
       <body
         className={`bg-background text-foreground ${GeistSans.variable} ${GeistMono.variable} selection:bg-selection selection:text-foreground font-sans antialiased`}
       >
+        <div className="pixel-background print:hidden" aria-hidden="true">
+          <div className="pixel-edge pixel-edge-left" />
+          <div className="pixel-edge pixel-edge-right" />
+        </div>
         <ThemeProvider attribute="class" defaultTheme="system">
           <a
             href="#main-content"

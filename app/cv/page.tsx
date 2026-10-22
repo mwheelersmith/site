@@ -45,38 +45,46 @@ export default function Cv() {
           </ExperienceHeading>
 
           <p>
-            Leading the Guest Account and Acquisitions team, mentoring team
-            members, delivering technical solutions, and defining architecture
-            for onboarding acquisitions onto a White Label platform, while
-            empowering guests to self-serve bookings.
+            Led the Guest Account and Acquisitions squad across three products,
+            coordinating up to six engineers and directly line-managing three.
+            Partnered with delivery managers, product owners and programme
+            leadership to align engineering capacity, technical priorities and
+            delivery with a 6–12 month roadmap.
           </p>
 
           <ExperienceContributions>
             <ExperienceContributionsItem>
-              Pioneered a new team structure across the Guest Experience Group,
-              increasing squad autonomy and accelerating feature ownership
-              across four product areas
+              Coached a developer to a formal “Exceeding Expectations” rating
+              within six months through clear goals, regular feedback and
+              targeted pairing. Supported their progression to independently
+              delivering a four-version Next.js upgrade, enabling new
+              booking-management initiatives and more secure infrastructure.
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
-              Managed a squad of six developers, streamlining onboarding and
-              driving performance and goal achievement
+              Led squad adoption of AI-assisted engineering through workshops,
+              pairing and shared guidance, helping an engineer deliver a
+              customer feedback questionnaire in one month against roughly three
+              months for similar previous projects. Introduced smaller pull
+              requests and more frequent, reviewable commits to address
+              increased code-review pressure.
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
-              Worked cross-functionally with delivery managers, product owners,
-              and programme leadership to align team delivery to a 6–12 month
-              company roadmap, enabling onboarding of 500+ new properties,
-              expanding self-service, and prioritising high-impact technical
-              debt reduction
+              Identified the opportunity to automate acquisition website setup
+              and enabled the team to implement it, reducing time to readiness
+              for marketing and business testing from two weeks to three days
+              across two subsequent website launches.
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
-              Led a team to automate acquisition website onboarding across tens
-              of sites, reducing setup time from two weeks to three days while
-              significantly lowering manual effort and human error
+              Secured extensions for two agency engineers to maintain capacity
+              for planned acquisitions, which were delivered on schedule.
+              Organised documentation and handover workshops so remaining
+              engineers could take ownership as contractors rolled off.
             </ExperienceContributionsItem>
             <ExperienceContributionsItem>
-              Supported a team member who was struggling with delivery, helping
-              them grow into a reliable contributor through clear expectations,
-              structured guidance, and regular coaching
+              Advocated for and coordinated a developer’s internal move into
+              Data Science, aligning their career progression with their
+              strengths and interests while managing the impact on team
+              capacity.
             </ExperienceContributionsItem>
           </ExperienceContributions>
         </ExperienceSection>

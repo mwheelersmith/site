@@ -33,7 +33,7 @@ export default function Home() {
         </h2>
         <div className="border-border space-y-2 md:border-l md:pl-8">
           <p>Travel Chapter</p>
-          <p className="text-muted">Lead Developer · 2025–present</p>
+          <p className="text-muted">Engineering Manager · 2026–present</p>
         </div>
         <div className="border-border space-y-2 md:border-l md:pl-8">
           <p>Previously at Cisco &amp; Textlocal</p>

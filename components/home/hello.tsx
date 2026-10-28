@@ -6,10 +6,10 @@ import { EmailReveal } from "@/components/email-reveal";
 export function Hello() {
   return (
     <div className="flex min-w-0 flex-col items-start gap-8 lg:gap-10">
-      <IdentityIntro label="Lead Developer / Worcester, UK" />
+      <IdentityIntro label="Engineering Manager / Worcester, UK" />
       <p className="max-w-[46ch] font-mono text-lg leading-relaxed lg:text-xl">
-        I build intuitive, accessible web applications and lead teams that care
-        about thoughtful engineering.
+        I lead teams that care about thoughtful engineering and build intuitive,
+        accessible products.
       </p>
       <div className="flex w-full min-w-0 flex-col items-start gap-x-8 gap-y-5 sm:flex-row sm:flex-wrap sm:items-center">
         <Link

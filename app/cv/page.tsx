@@ -32,6 +32,30 @@ export default function Cv() {
 
       <Experience>
         <ExperienceSection>
+          {/* Engineering Manager at Travel Chapter */}
+          <ExperienceHeading>
+            <ExperienceTitle company="Travel Chapter">
+              Engineering Manager
+            </ExperienceTitle>
+            <ExperienceDetails
+              location="Remote"
+              serviceDates="Oct 2026 - Present"
+              serviceLength={formatWorkDuration(new Date(2026, 9))}
+            />
+          </ExperienceHeading>
+
+          <p>
+            Lead people management and engineering capability across a team of
+            five engineers, combining existing reports with developers
+            transitioning from other teams under a new organisational structure.
+            Guiding engineers through changes to reporting lines, team
+            allocation and ways of working, while supporting their development,
+            maintaining delivery continuity and remaining hands-on with
+            technical decisions.
+          </p>
+        </ExperienceSection>
+
+        <ExperienceSection>
           {/* Lead Developer at Travel Chapter */}
           <ExperienceHeading>
             <ExperienceTitle company="Travel Chapter">
@@ -39,7 +63,7 @@ export default function Cv() {
             </ExperienceTitle>
             <ExperienceDetails
               location="Remote"
-              serviceDates="Oct 2025 - Present"
+              serviceDates="Oct 2025 - Oct 2026"
               serviceLength={formatWorkDuration(new Date(2025, 9))}
             />
           </ExperienceHeading>

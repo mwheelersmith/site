@@ -4,12 +4,13 @@ export function Summary() {
     <CvSection number="01" title="Profile">
       <div className="flex flex-col gap-6">
         <p className="max-w-[72ch] leading-relaxed">
-          I&rsquo;m a Lead Developer with 15+ years building scalable,
-          user-centric web applications. Originally a full-stack PHP developer,
-          I later specialised in front-end engineering before returning to
-          full-stack leadership with a modern TypeScript stack. I now guide
-          teams through architecture, delivery and quality to ship reliable
-          products with clarity and confidence.
+          Engineering Manager with 15+ years of software engineering experience,
+          combining deep technical expertise with people leadership, coaching
+          and cross-functional delivery. Experienced in building and developing
+          engineering teams, shaping technical direction and delivering scalable
+          web applications. Hands-on technical background spanning full-stack
+          development, modern TypeScript architectures and engineering best
+          practices.
         </p>
       </div>
     </CvSection>

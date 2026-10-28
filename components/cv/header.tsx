@@ -9,7 +9,7 @@ export function Header() {
     <div className="cv-identity flex flex-col items-start gap-6 py-12 lg:py-16">
       <IdentityIntro label="Curriculum vitae" />
       <p className="cv-role-line text-muted font-mono text-sm sm:text-base">
-        Lead Developer · Worcester, UK
+        Engineering Manager · Worcester, UK
       </p>
       <div className="flex w-full flex-wrap items-center justify-between gap-6">
         <div className="cv-contact-details flex w-full min-w-0 flex-wrap items-center gap-x-8 gap-y-4 font-mono text-sm lg:w-auto print:w-auto">

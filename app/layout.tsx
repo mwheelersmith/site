@@ -12,9 +12,9 @@ import ThemeSwitcher from "@/components/theme-switcher";
 import { BackgroundMotion } from "@/components/background-motion";
 
 export const metadata: Metadata = {
-  title: "Miles Wheeler-Smith | Lead Developer",
+  title: "Miles Wheeler-Smith | Engineering Manager",
   description:
-    "Lead Developer with 15+ years of experience building scalable, user-centric web applications. Expert in TypeScript, React, Next.js, and accessible, high-performance UI design.",
+    "Engineering Manager with 15+ years of software engineering experience. Passionate about developing engineers and building thoughtful, accessible digital products.",
 };
 
 export default function RootLayout({
